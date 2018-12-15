@@ -1,0 +1,16 @@
+#N canvas 347 247 692 465 10;
+#X floatatom 289 142 5 0 0 0 - - -;
+#X obj 289 97 sigmund~ -hop 1024 pitch env;
+#X obj 289 43 adc~;
+#X floatatom 289 223 4 0 0 0 - - -;
+#X obj 289 258 ctlout 1 1;
+#X floatatom 454 167 5 0 0 0 - - -;
+#X obj 454 261 ctlout 2 1;
+#X obj 289 188 clip 20 74;
+#X connect 0 0 7 0;
+#X connect 1 0 0 0;
+#X connect 1 1 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 7 0 3 0;

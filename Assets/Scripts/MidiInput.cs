@@ -6,15 +6,9 @@ using System;
 
 public class MidiInput : MonoBehaviour
 {
-    public GameObject C4;
-    public string keyName;
-    public string temp;
 
     public int pitch;
     public int volume;
-
-    private float timer;
-    private int flag;
 
     void Start()
     {
@@ -22,8 +16,6 @@ public class MidiInput : MonoBehaviour
 
     void Update()
     {
-
-
         float pit = MidiMaster.GetKnob(1);
         pit = pit * 128;
         pitch = (int)pit;
@@ -31,56 +23,7 @@ public class MidiInput : MonoBehaviour
         float vol = MidiMaster.GetKnob(2);
         vol = vol * 128;
         volume = (int)vol;
-        //print("volume = " + volume);
 
-
-
-        CheckPitch(pitch, 60);
-        CheckPitch(pitch, 61);
-        CheckPitch(pitch, 62);
-        //CheckPitch(pitch, 60);//C4
-        //CheckPitch(pitch, 59);//B3
-        //CheckPitch(pitch, 58);//A#3
-        //CheckPitch(pitch, 57);//A3
-
-
-        if (timer >= 1)
-        {
-            timer = 0;
-            keyName = temp;
-            if (keyName != null)
-            {
-                print(keyName);
-                keyName = null;
-                temp = null;
-            }
-            //C4.GetComponent<SpriteRenderer>().color = Color.green;
-        }
-        else
-        {
-            timer += Time.deltaTime;
-            //print(timer);
-
-        }
-
-
-    }
-
-    public void CheckPitch(int pitch , int scale)
-    {
-        //print(pitch);
-        if (pitch == scale)
-        {
-            flag = 0;
-        }
-        else
-        {
-            if (flag >= 10)
-            {
-                timer = 0;
-            }
-            flag++;
-        }
     }
 
 }

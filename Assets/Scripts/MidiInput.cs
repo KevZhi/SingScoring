@@ -19,7 +19,7 @@ public class MidiInput : MonoBehaviour
         float pit = MidiMaster.GetKnob(1);
         pit = pit * 128;
         pitch = (int)pit;
-        //print("Pitch = " + pitch);
+   
         float vol = MidiMaster.GetKnob(2);
         vol = vol * 128;
         volume = (int)vol;

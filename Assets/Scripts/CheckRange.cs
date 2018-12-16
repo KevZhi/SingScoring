@@ -15,6 +15,7 @@ public class CheckRange : MonoBehaviour {
 
     public string pitchMax;
     public string pitchMin;
+    public int rangecount;
 
 	// Use this for initialization
 	void Start () {
@@ -49,12 +50,12 @@ public class CheckRange : MonoBehaviour {
                 string objName = i.ToString();
                 GameObject obj = GameObject.Find(objName);
                 obj.GetComponent<SpriteRenderer>().color = Color.green;
+                rangecount=Max-Min+1;
             }
             pitchMin = CheckPitchName(Min);
             pitchMax = CheckPitchName(Max);
 
-            rangeText.text = "Range : " + pitchMin + " ~ " + pitchMax;
-
+            rangeText.text = "您的音域是 : " + pitchMin + " ~ " + pitchMax + "，共计" + rangecount + "个音";
         }
 
 	}

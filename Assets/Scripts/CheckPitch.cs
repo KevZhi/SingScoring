@@ -7,7 +7,7 @@ public class CheckPitch : MonoBehaviour {
 
     public GameObject gm;
     public MidiInput midiInput;
-
+    public CheckRange checkRange;
     public string scale;
     public string pitch;
 
@@ -18,6 +18,7 @@ public class CheckPitch : MonoBehaviour {
     {
         gm = GameObject.Find("GameManager");
         midiInput = gm.GetComponent<MidiInput>();
+        checkRange = gm.GetComponent<CheckRange>();
         scale = this.name;
     }
 
@@ -49,7 +50,8 @@ public class CheckPitch : MonoBehaviour {
             timer = 0;
             this.GetComponent<SpriteRenderer>().color = Color.green;
             int a = Convert.ToInt32(scale);
-            print(a);
+            checkRange.tempMax = a;
+            checkRange.tempMin = a;
             //print(scale);
         }
         else

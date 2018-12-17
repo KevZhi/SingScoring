@@ -6,23 +6,18 @@ using UnityEngine.UI;
 public class CheckRange : MonoBehaviour {
 
     public Text rangeText;
-
-
     public int Max;
     public int Min;
     public int tempMax;
     public int tempMin;
-
     public string pitchMax;
     public string pitchMin;
     public int rangecount;
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
         if (Max == 0 )
@@ -33,7 +28,6 @@ public class CheckRange : MonoBehaviour {
         {
             Min = tempMin;
         }
-
         if (tempMax > Max)
         {
             Max = tempMax;
@@ -42,7 +36,6 @@ public class CheckRange : MonoBehaviour {
         {
             Min = tempMin;
         }
-
         if (Max != 0 && Min != 0)
         {
             for (int i = Min; i < Max; i++)
@@ -50,14 +43,12 @@ public class CheckRange : MonoBehaviour {
                 string objName = i.ToString();
                 GameObject obj = GameObject.Find(objName);
                 obj.GetComponent<SpriteRenderer>().color = Color.green;
-                rangecount=Max-Min+1;
+                rangecount = Max - Min + 1;
             }
             pitchMin = CheckPitchName(Min);
             pitchMax = CheckPitchName(Max);
-
             rangeText.text = "您的音域是 : " + pitchMin + " ~ " + pitchMax + "，共计" + rangecount + "个音";
         }
-
 	}
 
     public string CheckPitchName(int pitch)
@@ -116,8 +107,6 @@ public class CheckRange : MonoBehaviour {
         }
 
         pitchName = firstName + lastName;
-
         return pitchName;
     }
-
 }

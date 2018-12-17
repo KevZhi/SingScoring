@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour {
 
-    public CheckStability cs;
-
     private void Awake()
     {
-        cs = this.GetComponent<CheckStability>();
+    Screen.SetResolution(800, 480, false);
     }
 
-    // Use this for initialization
     void Start () {
-		
+		 
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}
@@ -27,10 +24,9 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StabilityStart()
+    public void GoToScene()
     {
-        GameObject startBtn = GameObject.Find("Start");
-        startBtn.SetActive(false);
-        cs.active = true;
+        string sceneName = EventSystem.current.currentSelectedGameObject.name;
+        SceneManager.LoadScene(sceneName);
     }
 }

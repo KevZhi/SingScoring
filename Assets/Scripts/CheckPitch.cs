@@ -10,7 +10,6 @@ public class CheckPitch : MonoBehaviour {
     public CheckRange checkRange;
     public string scale;
     public string pitch;
-
     private int flag;
     private float timer;
 
@@ -22,12 +21,10 @@ public class CheckPitch : MonoBehaviour {
         scale = this.name;
     }
 
-    // Use this for initialization
     void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
         pitch = midiInput.pitch.ToString();
@@ -52,13 +49,10 @@ public class CheckPitch : MonoBehaviour {
             int a = Convert.ToInt32(scale);
             checkRange.tempMax = a;
             checkRange.tempMin = a;
-            //print(scale);
         }
         else
         {
             timer += Time.deltaTime;
         }
-
-
     }
 }

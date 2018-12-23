@@ -9,11 +9,11 @@ Please roll down and **skip Chinese for English version**  of README.md
 
 ## 如何使用本程序
     运行这个程序前，您需要配置好系统上的IAC Bus，修改PureData的设置，使sigmud~的识别结果输出到指定的MIDI通道， Unity开发的主程序便可接受sigmud识别出的音高和音量信息。
-    PureData的安装包（程序）、pitchDetect.pd、loopMIDI的安装包在源代码文件夹和release的压缩包中均已经提供。
+    PureData的安装包（程序）、pitchDetect.pd、loopMIDI的安装包在源代码文件夹和release的压缩包中均已经提供。
 
 ### macOS
 
-1. 去「启动台」，在上方搜索框中搜索并打开「音频MIDI设置」（图标为一个MIDI键盘）。
+1. 去「启动台」，在上方搜索框中搜索并打开「音频MIDI设置」（图标为一个MIDI键盘）。
 
 2. 按下 Command+2 键（或去菜单栏点击窗口——显示MIDI工作室）。
 
@@ -49,7 +49,7 @@ Please roll down and **skip Chinese for English version**  of README.md
 ## 使用的插件
 
 **MidiJack** 使Unity支持读取MIDI接口信息的插件，
-*由 Keijiro Takahashi 开发，MIT 协议*
+*由 Keijiro Takahashi 开发，MIT 协议*
 
 https://github.com/keijiro/MidiJack
 
@@ -102,7 +102,7 @@ This project is student homework, don't expect too much about it.The main purpos
 
 5. Tick "DSP" on main window of Puredata, try to hum something, You'll see the pitchDetect.pd window two parameters are changing, then you're able to run the main executable created by Unity
 
-    We suggest you to remove the IAC bus setting or delete the LoopMIDI after using our App, for not making any trouble when you use any MIDI-releated app in the future.
+    We suggest you to remove the IAC bus setting or delete the LoopMIDI after using our App, for not making any trouble when you use any MIDI-releated app in the future.
 
 
 ## Denpendency

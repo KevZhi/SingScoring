@@ -43,7 +43,7 @@ Please roll down and **skip Chinese for English version**  of README.md
 5. 在PureData的主窗口勾选「DSP」左边的勾，随便哼唱一个音调，如果pitchDetect.pd程序窗口中的两个数值在变化，说明正常，就可以运行主程序了。
 
       
-         试用完毕后，建议将设置的IAC Bus恢复原状、删除设置的端口（Windows则是卸载LoopMidiPort），
+         试用完毕后，建议将设置的IAC Bus恢复原状、删除设置的端口（Windows则是卸载LoopMidi），
          以免影响您今后使用其他音频/MIDI类应用程序。
      真麻烦是不是，没办法...水平不够
         主要原理是PureData将识别结果传输至MIDI通道，由Unity接收。而这个通道需要在系统内部进行虚拟。
@@ -76,7 +76,8 @@ Go to [release](https://github.com/KevZhi/SingScoring/releases) to get the pre-c
 This project is student homework, don't expect too much about it.The main purpose of developing this app was just learn and practice Unity3D.  It consist of two independet modules, and it's not plug and play, so you need to do some configure before running as the instructions below.
 
 ## How to use this application?
-    Before run this app, you need to configure IAC bus and Puredata settings as instructions provided below. Which will make Unity receive the MIDI infomation from Puredata.
+    Before run this app, you need to configure IAC bus and Puredata settings as instructions provided below.
+    Which will make Unity receive the MIDI infomation from Puredata.
 
 ### macOS
 
@@ -106,7 +107,8 @@ This project is student homework, don't expect too much about it.The main purpos
 
 5. Tick "DSP" on main window of Puredata, try to hum something, You'll see the pitchDetect.pd window two parameters are changing, then you're able to run the main executable created by Unity
 
-    We suggest you to remove the IAC bus setting or delete the LoopMIDI after using our App, for not making any trouble when you use any MIDI-releated app in the future.
+    We suggest you to remove the IAC bus setting or delete the LoopMIDI after using our App, 
+    for not making any trouble when you use any MIDI-releated app in the future.
 
 
 ## Denpendency

@@ -22,7 +22,8 @@ Please roll down and **skip Chinese for English version**  of README.md
 
 4. 点击「+」图标，添加一个端口。（可随意命名）
 
-5. 双击解压「PureData_mac.zip」，把文件夹内的「pitchDetect.pd」拖动到「PureData」应用的图标上，即可打开。
+5. 双击解压「PureData_mac.zip」，把文件夹内的「pitchDetect.pd」拖动到绿色「PureData」应用的图标上，即可打开。
+    （release中的版本不用解压）
 
 6. 点击菜单栏中的「Pd」——「Preference」（第一个）——「MIDI」，将输出端口设定为你在IAC驱动程序中刚刚新建的那个，然后点击OK。
 

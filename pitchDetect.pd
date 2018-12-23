@@ -6,7 +6,7 @@
 #X obj 289 258 ctlout 1 1;
 #X floatatom 454 167 5 0 0 0 - - -;
 #X obj 454 261 ctlout 2 1;
-#X obj 289 188 clip 20 74;
+#X obj 289 188 clip 20 81;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 1 1 5 0;

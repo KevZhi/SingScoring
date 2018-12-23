@@ -5,10 +5,11 @@ Please roll down and **skip Chinese for English version**  of README.md
 
 因为本品只是个学生作业，受我们的水平限制，**这个程序并不是打开就能用，是由两个独立的程序模块构成**。作者主要目的在于学习与实践Unity、MIDI的相关知识，请您理解。
 
-
+您可以在 [release](https://github.com/KevZhi/SingScoring/releases) 页面直接下载编译好的可执行程序。
 
 ## 如何使用本程序
-    运行这个程序前，您需要配置好系统上的IAC Bus，修改PureData的设置，使sigmud~的识别结果输出到指定的MIDI通道， Unity开发的主程序便可接受sigmud识别出的音高和音量信息。
+    运行这个程序前，您需要配置好系统上的IAC Bus，修改PureData的设置，使sigmud~的识别结果输出到指定的MIDI通道，
+    Unity开发的主程序便可接受sigmud识别出的音高和音量信息。
     PureData的安装包（程序）、pitchDetect.pd、loopMIDI的安装包在源代码文件夹和release的压缩包中均已经提供。
 
 ### macOS
@@ -42,7 +43,8 @@ Please roll down and **skip Chinese for English version**  of README.md
 5. 在PureData的主窗口勾选「DSP」左边的勾，随便哼唱一个音调，如果pitchDetect.pd程序窗口中的两个数值在变化，说明正常，就可以运行主程序了。
 
       
-         试用完毕后，建议将设置的IAC Bus恢复原状、删除设置的端口（Windows则是卸载LoopMidiPort），以免影响您今后使用其他音频/MIDI类应用程序。
+         试用完毕后，建议将设置的IAC Bus恢复原状、删除设置的端口（Windows则是卸载LoopMidiPort），
+         以免影响您今后使用其他音频/MIDI类应用程序。
      真麻烦是不是，没办法...水平不够
         主要原理是PureData将识别结果传输至MIDI通道，由Unity接收。而这个通道需要在系统内部进行虚拟。
 
@@ -68,6 +70,8 @@ MIDI通道传输的信息只能是0-127的整数，所以音准识别的结果�
 # SingScoring
 
 A simple singing scoring system based on Unity 3D, core pitch recognization function working on PureData - sigmund~. Sigmund~ pass the recognized data to Unity 3D via MIDI channel. This app contains 3 modules: Pitch accurate, Pitch Range, Voice Stablitiy.
+
+Go to [release](https://github.com/KevZhi/SingScoring/releases) to get the pre-complied executable.
 
 This project is student homework, don't expect too much about it.The main purpose of developing this app was just learn and practice Unity3D.  It consist of two independet modules, and it's not plug and play, so you need to do some configure before running as the instructions below.
 

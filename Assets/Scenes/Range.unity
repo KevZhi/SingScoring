@@ -1338,7 +1338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48044f50c7e15e34481bea040a20cebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cs: {fileID: 0}
 --- !u!1 &598145203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1764,7 @@ GameObject:
   - component: {fileID: 825040932}
   - component: {fileID: 825040931}
   m_Layer: 5
-  m_Name: home
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1827,7 +1826,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 825040932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 594100926}
+        m_MethodName: GoToScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &825040932
@@ -5090,10 +5100,10 @@ RectTransform:
   m_Father: {fileID: 824792550}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024199, y: 105}
-  m_SizeDelta: {x: 100.92, y: 29.195}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 100.92, y: 29.195007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845553132
 MonoBehaviour:
@@ -5351,7 +5361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000036359, y: 56}
+  m_AnchoredPosition: {x: 0, y: 87.5}
   m_SizeDelta: {x: 550.84, y: 53.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1975010543

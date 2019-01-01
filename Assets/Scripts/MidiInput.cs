@@ -9,6 +9,8 @@ public class MidiInput : MonoBehaviour
 
     public int pitch;
     public int volume;
+    public int cent;
+    public float fpitch;
 
     void Start()
     {
@@ -19,10 +21,16 @@ public class MidiInput : MonoBehaviour
     {
         float pit = MidiMaster.GetKnob(1);
         pit = pit * 128;
-        pitch = (int)pit + 1;
+        pitch = (int)pit;
    
         float vol = MidiMaster.GetKnob(2);
         vol = vol * 128;
         volume = (int)vol;
+
+        float cen = MidiMaster.GetKnob(3);
+        cen = cen * 128;
+        cent = (int)cen;
+    
+        fpitch = pitch + (float)cent / 100;;
     }
 }

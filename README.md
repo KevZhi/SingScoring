@@ -64,7 +64,9 @@ http://puredata.info
 
 ## 已知的缺陷
 
-MIDI通道传输的信息只能是0-127的整数，所以音准识别的结果数值输出到MIDI通道后只能是整数，所以只能精确到音，而不是音分。
+~~MIDI通道传输的信息只能是0-127的整数，所以音准识别的结果数值输出到MIDI通道后只能是整数，所以只能精确到音，而不是音分。~~
+
+（已在1.1版本中修复，让 Puredata 的 pitchDetect.pd 分离小数，使用了第三个通道来单独传输小数给Unity，Unity再进行拼接，音准测试的精确度从【差一个音以内都算准】变成了【差20音分以内才算准】）
 
 
 ***
@@ -126,4 +128,7 @@ http://puredata.info
 
 ## Known issues
 
-MIDI channel only transfer 8 bit int. So all value on MIDI was 0-127 without decimals, the pitch accurate can only tell between note, and cannot make it accurate to cent.
+~~MIDI channel only transfer 8 bit int. So all value on MIDI was 0-127 without decimals, the pitch accurate can only tell between note, and cannot make it accurate to cent.~~
+
+
+(Fixed in ver 1.1, pitchDetect.pd now seperatly output decimals to MIDI channel 3 which was unused before, so Unity can receive both ints and decimals together. The accuracy of intonation test now enhanced to [+-20 cent is accurate], which was [+- a note is accurate] before )

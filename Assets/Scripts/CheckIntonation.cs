@@ -43,7 +43,7 @@ public class CheckIntonation : MonoBehaviour {
             if (number < randomList.Count)
             {
                 pitch = randomList[number];
-                //GameObject.Find(pitch).GetComponent<SpriteRenderer>().color = Color.yellow;
+                
                 LoadAudioOnce(pitch);
                 start = true;
             }
@@ -125,13 +125,15 @@ public class CheckIntonation : MonoBehaviour {
             else
             {
                 collectTimer += Time.deltaTime;
-                if (midiInput.pitch !=  Convert.ToInt32(pitch))
-                {
-                    flagFalse++;
-                }
-                else
+                int stdpitch=Convert.ToInt32(pitch);
+                float standard = (float)stdpitch;
+                if ((midiInput.fpitch>=standard-0.2) && (midiInput.fpitch<=standard+0.2))
                 {
                     flagTrue++;
+                }
+                if ((midiInput.fpitch<(standard-0.2)) || (midiInput.fpitch>standard+0.2))
+                {
+                    flagFalse++;
                 }
             }
         }

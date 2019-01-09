@@ -20,7 +20,7 @@ public class CheckStability : MonoBehaviour
     public GameObject circle;
     public float speed;
     private float x;
-    private int flag;
+    public int flag;
 
     private void Awake()
     {
@@ -37,25 +37,23 @@ public class CheckStability : MonoBehaviour
         volume = midiInput.volume;
         if (once)
         {
-            if (volume >= 70)
+            if (volume < 70)
             {
-                flag = 0;
-            }
-            else
-            {
+                flag++;
                 if (flag >= 60)
                 {
                     startTimer = 0;
+                    flag = 0;
                 }
-                flag++;
             }
+
             if (startTimer >= 2)
             {
                 startTimer = 0;
                 active = true;
                 once = false;
             }
-            else
+            if(startTimer < 2)
             {
                 startTimer += Time.deltaTime;
             }

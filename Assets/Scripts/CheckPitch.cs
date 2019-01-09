@@ -29,17 +29,14 @@ public class CheckPitch : MonoBehaviour {
 
         pitch = midiInput.pitch.ToString();
 
-        if (pitch == scale)
+        if (pitch != scale)
         {
-            flag = 0;
-        }
-        else
-        {
+            flag++;
             if (flag >= 10)
             {
+                flag = 0;
                 timer = 0;
             }
-            flag++;
         }
 
         if (timer >= 1)

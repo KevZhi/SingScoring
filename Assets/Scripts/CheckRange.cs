@@ -38,12 +38,12 @@ public class CheckRange : MonoBehaviour {
         }
         if (Max != 0 && Min != 0)
         {
+            rangecount = Max - Min + 1;
             for (int i = Min; i < Max; i++)
             {
                 string objName = i.ToString();
                 GameObject obj = GameObject.Find(objName);
                 obj.GetComponent<SpriteRenderer>().color = Color.green;
-                rangecount = Max - Min + 1;
             }
             pitchMin = CheckPitchName(Min);
             pitchMax = CheckPitchName(Max);
